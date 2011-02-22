@@ -3,7 +3,7 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set list
-set listchars=tab:¿-,trail:-,eol:¬
+set listchars=tab:▸-,trail:-,eol:¬
 
 set nocompatible        " use vim defaults
 set scrolloff=3         " keep 3 lines when scrolling
