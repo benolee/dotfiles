@@ -1,6 +1,6 @@
 ;; Awesome color scheme!
 (require 'color-theme)
-(load-file "~/elisp/color-theme-railscasts.el")
+(load-file "~/.emacs.d/color-theme-railscasts.el")
 (color-theme-railscasts)
 
 ;; Disable loading of default.el at startup
