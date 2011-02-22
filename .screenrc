@@ -1,0 +1,25 @@
+# Turn off welcome message
+startup_message off
+
+# Enable scrollback with Shift+PgUp, Shift+PgDn and scrollwheel
+termcapinfo xterm* ti@:te@
+
+# Fix for residual editor text
+# When you open a text editor like Vim in screen and then close it, the text
+# may stay visible in your terminal. To fix this, set altscreen on.
+altscreen on
+
+# xterm 256 colors
+# allow bold colors (necessary for some reason)
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# use current background color for erased characters
+defbce on
+
+# Scrollback
+defscrollback 2048
+
+# If a window goes unresponsive, don't block the whole session waiting for it.
+defnonblock on
+
