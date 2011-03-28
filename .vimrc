@@ -4,6 +4,7 @@ set shiftwidth=2
 set autoindent
 set list
 set listchars=tab:▸-,trail:-,eol:¬
+let mapleader = ","
 
 set nocompatible               " use vim defaults
 set scrolloff=3                " keep 3 lines when scrolling
@@ -13,6 +14,7 @@ set showcmd                    " display incomplete commands
 set nobackup                   " do not keep a backup file
 set number                     " show line numbers
 set ruler                      " show the current row and column
+set noswapfile
 
 set hlsearch                   " highlight searches
 set incsearch                  " do incremental searching

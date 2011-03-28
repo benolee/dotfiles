@@ -1,7 +1,10 @@
-;; Awesome color scheme!
+(add-to-list 'load-path "~/.emacs.d")
 (require 'color-theme)
-(load-file "~/.emacs.d/color-theme-railscasts.el")
-(color-theme-railscasts)
+  (load-file "~/.emacs.d/color-theme-railscasts.el")
+  (color-theme-railscasts)
+  ;(load-file "~/.emacs.d/color-theme-blackboard.el")
+  ;(color-theme-blackboard)
+  (require 'color-theme-autoloads "color-theme-autoloads")
 
 ;; Disable loading of default.el at startup
 (setq inhibit-default-init t)

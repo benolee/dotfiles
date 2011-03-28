@@ -267,7 +267,7 @@ settings = {
   core = {
     real_name = "vienneau";
     user_name = "vienneau";
-    nick = "vienneau";
+    nick = "benholley";
   };
   "fe-common/core" = { theme = "revolutionaryv3"; };
 };

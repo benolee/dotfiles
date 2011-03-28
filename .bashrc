@@ -91,10 +91,11 @@ if [[ -n "$PS1" ]]; then
   alias la='ls -A'
   alias l='ls -CF'
   alias ack='ack-grep'
-  alias minecraft='java -Xmx1024M -Xms512M -cp ~/Minecraft.jar net.minecraft.LauncherFrame'
+  alias minecraft='java -Xmx1024M -Xms512M -cp ~/games/minecraft.jar net.minecraft.LauncherFrame'
   alias xcopy='xclip -sel clipboard'
   alias xpaste='xclip -sel clipboard -o'
   alias darkplaces='~/games/quake/darkplaces-linux-686-sdl'
+  alias gs='git status'
 
   # make copy operation interactive and verbose
   alias cp='cp -iv'
@@ -121,6 +122,11 @@ if [[ -n "$PS1" ]]; then
 
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-[[ -r "$rvm_path/scripts/completion" ]] && . "$rvm_path/scripts/completion"
-[[ -r "$PWD/.rvmrc" ]] && . "$PWD/.rvmrc"
+# if the file 'rvm' exists and has a size greater than zero, source the file
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# if the file 'completion' exists and is readable, source the file
+[[ -r "$rvm_path/scripts/completion" ]] && source "$rvm_path/scripts/completion"
+
+# if the file '.rvmrc' exists and is readable, source the file
+#[[ -r "$PWD/.rvmrc" ]] && . "$PWD/.rvmrc"
