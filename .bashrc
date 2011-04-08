@@ -6,7 +6,7 @@
 # [ -z "$PS1" ] && return
 
 function __git_branch {
-  __git_ps1 "*%s"
+  __git_ps1 "\e[0;32m*%s\e[0m"
 }
 
 if [[ -n "$PS1" ]]; then
@@ -61,7 +61,7 @@ if [[ -n "$PS1" ]]; then
   if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\e[0;34m\]\w \[\e[0;31m\]$(__git_branch) \[\e[0;32m\]$(rvm-prompt)\n\[\e[0;32m\]\$\[\e[0m\] '
   else
-      PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
   fi
   unset color_prompt force_color_prompt
 
@@ -96,6 +96,7 @@ if [[ -n "$PS1" ]]; then
   alias xpaste='xclip -sel clipboard -o'
   alias darkplaces='~/games/quake/darkplaces-linux-686-sdl'
   alias gs='git status'
+  alias go='gnome-open'
 
   # make copy operation interactive and verbose
   alias cp='cp -iv'
@@ -119,6 +120,9 @@ if [[ -n "$PS1" ]]; then
   if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
       . /etc/bash_completion
   fi
+
+  # update PATH to include node.js
+  PATH=$HOME/local/node/bin:$PATH
 
 fi
 

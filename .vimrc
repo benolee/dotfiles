@@ -32,9 +32,13 @@ filetype on                    " detect type of file
 filetype indent on             " load indent file for specific file type
 
 set background=dark
+"set background=light
 
 set t_Co=256                   " set colors to 256
-colorscheme vividchalk         " textmate-like color scheme
+"colorscheme solarized         " colorscheme from http://ethanschoonover.com/solarized
+colorscheme vividchalk
+set gfn=Monospace\ 12         " set gui-font
+
 
 map <C-o> :tabnew 
 map <C-k> :tabprev<CR> 
