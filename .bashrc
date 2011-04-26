@@ -41,7 +41,7 @@ if [[ -n "$PS1" ]]; then
   case "$TERM" in
       xterm-color) color_prompt=yes;;
   esac
-
+  
   # uncomment for a colored prompt, if the terminal has the capability; turned
   # off by default to not distract the user: the focus in a terminal window
   # should be on the output of commands, not on the prompt
@@ -97,6 +97,7 @@ if [[ -n "$PS1" ]]; then
   alias darkplaces='~/games/quake/darkplaces-linux-686-sdl'
   alias gs='git status'
   alias go='gnome-open'
+  alias pru="rvm 1.9.2 exec pru"
 
   # make copy operation interactive and verbose
   alias cp='cp -iv'
@@ -123,6 +124,13 @@ if [[ -n "$PS1" ]]; then
 
   # update PATH to include node.js
   PATH=$HOME/local/node/bin:$PATH
+
+  # set TERM to xterm-256
+  if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    export TERM='xterm-256color'
+  else
+    export TERM='xterm-color'
+  fi
 
 fi
 
