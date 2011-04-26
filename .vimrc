@@ -6,6 +6,10 @@ set list
 set listchars=tab:▸-,trail:-,eol:¬
 let mapleader = ","
 
+set guifont=Droid\ Sans\ Mono\ 12
+set guioptions-=m              " Remove menu bar
+set guioptions-=T              " Remove toolbar
+
 set nocompatible               " use vim defaults
 set scrolloff=3                " keep 3 lines when scrolling
 set ai                         " set auto-indenting on for programming
@@ -16,7 +20,7 @@ set number                     " show line numbers
 set ruler                      " show the current row and column
 set noswapfile
 
-set hlsearch                   " highlight searches
+set nohlsearch                 " don't highlight searches
 set incsearch                  " do incremental searching
 set showmatch                  " jump to matches when entering regexp
 set ignorecase                 " ignore case when searching
@@ -31,16 +35,12 @@ syntax on                      " turn syntax highlighting on by default
 filetype on                    " detect type of file
 filetype indent on             " load indent file for specific file type
 
-set background=dark
-"set background=light
-
-set t_Co=256                   " set colors to 256
-"colorscheme solarized         " colorscheme from http://ethanschoonover.com/solarized
-colorscheme vividchalk
-set gfn=Monospace\ 12         " set gui-font
-
-
 map <C-o> :tabnew 
 map <C-k> :tabprev<CR> 
 map <C-j> :tabnext<CR>
+
+"set t_Co=256
+set background=dark
+colorscheme solarized
+"colorscheme xoria256
 
