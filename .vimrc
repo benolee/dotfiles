@@ -6,9 +6,6 @@ set list
 set listchars=tab:▸-,trail:-,eol:¬
 let mapleader = ","
 
-set guifont=Droid\ Sans\ Mono\ 12
-set guioptions-=m              " Remove menu bar
-set guioptions-=T              " Remove toolbar
 
 set nocompatible               " use vim defaults
 set scrolloff=3                " keep 3 lines when scrolling
@@ -39,8 +36,18 @@ map <C-o> :tabnew
 map <C-k> :tabprev<CR> 
 map <C-j> :tabnext<CR>
 
-"set t_Co=256
 set background=dark
-colorscheme solarized
-"colorscheme xoria256
+
+if has("gui_running")
+  colorscheme solarized
+  set guifont=Inconsolata\ 13
+  set guioptions-=m              " Remove menu bar
+  set guioptions-=T              " Remove toolbar
+else
+  set t_Co=256
+  syntax on
+  set hlsearch
+  " colorscheme devbox-dark-256
+  colorscheme railscasts
+endif
 
