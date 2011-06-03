@@ -6,13 +6,6 @@ set list
 set listchars=tab:▸-,trail:-,eol:¬
 let mapleader = ","
 
-if has('gui_running')
-  set guifont=Inconsolata\ 13
-  set guioptions-=m              " Remove menu bar
-  set guioptions-=T              " Remove toolbar
-  set guioptions-=r            " Remove vertical scrollbar
-  set lines=43 columns=143    " Start gvim maximized
-endif
 
 set nocompatible               " use vim defaults
 set scrolloff=3                " keep 3 lines when scrolling
@@ -39,12 +32,23 @@ syntax on                      " turn syntax highlighting on by default
 filetype on                    " detect type of file
 filetype indent on             " load indent file for specific file type
 
-" map <C-o> :tabnew 
-" map <C-k> :tabprev<CR> 
-" map <C-j> :tabnext<CR>
+map <C-o> :tabnew 
+map <C-k> :tabprev<CR> 
+map <C-j> :tabnext<CR>
 
-"set t_Co=256
 set background=dark
-colorscheme solarized
-"colorscheme xoria256
+
+if has('gui_running')
+  set guifont=Inconsolata\ 13
+  colorscheme solarized
+  set guioptions-=m              " Remove menu bar
+  set guioptions-=T              " Remove toolbar
+  set guioptions-=r            " Remove vertical scrollbar
+  set lines=43 columns=143    " Start gvim maximized
+else
+  set t_Co=256
+  syntax on
+  set hlsearch
+  colorscheme railscasts
+endif
 
