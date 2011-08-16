@@ -3,7 +3,7 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set list
-set listchars=tab:▸-,trail:-,eol:¬
+set listchars=tab:▸-,trail:-
 let mapleader = ","
 
 
